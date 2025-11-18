@@ -25,7 +25,7 @@ const admController = {
   },
 
   PaginaAdm: (req, res) => {
-    res.render('admin');
+    res.render('admin', { layout: "mainAdm",});
   },
 
   addNewAdm: async (req, res) => {

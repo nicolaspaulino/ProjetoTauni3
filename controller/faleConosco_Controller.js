@@ -3,7 +3,7 @@ import Fale from '../models/faleConosco.js';
 const faleController = {
 
     PaginaFale: (req, res)=>{
-        res.render('formulario', { layout: 'mainUser' }) 
+        res.render('formulario') 
     },
 
     addNewMessage: async (req, res) => {
