@@ -1,4 +1,4 @@
-import Fale from '../models/faleconosco.js';
+import Fale from '../models/faleConosco.js';
 
 const faleController = {
 
