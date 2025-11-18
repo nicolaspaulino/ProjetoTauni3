@@ -3,6 +3,6 @@ Projeto Restaurante3.0
 - Nicolas Paulino de Souza  
 - Tauany Leobeski Lopes
 
-mudar a senha do db.js e node app.js
+Instalar a extensão sqlite escreverno temrinal  node app.js
 
 # ProjetoTauni3
