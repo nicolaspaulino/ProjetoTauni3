@@ -1,0 +1,90 @@
+body{
+    background-color: rgba(68, 64, 64, 0.459);
+    margin: 0;
+    width: 100%;
+}
+#Nav{
+    overflow: hidden;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(230, 221, 140, 0.767);
+    display: flex;
+    align-items: center;  
+}
+li{
+    float: inline-start;
+}
+.N_principal{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1em;
+}
+#logo
+{
+    width: 25%;
+    display: block;
+    padding: 4px 6px;
+}
+@media (max-width: 600px) {
+    #Nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .N_principal {
+        width: 100%;
+        text-align: left;
+        padding: 1em;
+        font-size: 1.1em;
+    }
+    img {
+        width: 20vw;
+    }
+}
+table {
+
+    width: 80%;
+    text-align: center;
+    font-size: 1.5em;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+#telalogin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  #telalogin h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .opcoes-login {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .botao {
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+    transition: all 0.2s ease;
+  }
+  
+  .botao:hover {
+    background-color: black;
+    color: white;
+    transform: scale(1.05);
+  }

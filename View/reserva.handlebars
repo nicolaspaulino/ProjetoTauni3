@@ -1,0 +1,26 @@
+<form action="/reserva/add" method="post">
+
+    <fieldset>
+
+        <legend>Reservas:</legend>
+
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" placeholder="Insira seu nome!"><br><br>
+   
+        <label for="E_mail">Email:</label>
+        <input type="text" name="E_mail" placeholder="Insira seu email!"><br><br>
+
+        <label for="data">Data da reserva:</label>
+        <input type="date" name="data"><br><br>
+
+        <label for="hora">Horario da reserva</label>
+        <input type="time" name="hora">
+
+        <label for="num">Numero de convidados:</label>
+        <input type="number" name="qnt" min="1" step="1" placeholder="Insira o numero de convidados"><br><br>
+    
+        <input type="submit"><input type="reset">
+    
+    </fieldset>
+
+</form>

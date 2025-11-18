@@ -1,0 +1,42 @@
+<h1 class="mt-4">Gerenciar Pedidos</h1>
+
+<table style="border: 4px dotted rgba(0, 0, 0, 0.918); border-collapse: collapse;" >
+    <thead>
+        <tr>
+            <th>Total</th>
+            <th>Status</th>
+            <th>Itens</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {{#each pedidos}}
+        <tr>
+            <td>R$ {{this.total}}</td>
+
+            <td>
+                <form action="/cardapio/pedidos/status/{{this.id}}" method="POST">
+                    <select name="status" onchange="this.form.submit()">
+                        <option value="pendente" {{#ifEquals this.status "pendente"}}selected{{/ifEquals}}>pendente</option>
+                        <option value="preparando" {{#ifEquals this.status "preparando"}}selected{{/ifEquals}}>preparando</option>
+                        <option value="pronto" {{#ifEquals this.status "pronto"}}selected{{/ifEquals}}>pronto</option>
+                    </select>
+                </form>
+            </td>
+
+            <td>
+                <ul>
+                    {{#each this.ItemPedidos}}
+                    <li>{{quantidade}}x - {{produto}} (R$ {{preco}})</li>
+                    {{/each}}
+                </ul>
+            </td>
+
+            <td>
+                <a href="/cardapio/pedidos/excluir/{{this.id}}" class="btn btn-danger btn-sm">Excluir</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

@@ -1,0 +1,29 @@
+<h2>Gerenciar Produtos</h2>
+
+<table border="1" cellpadding="8">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Descrição</th>
+      <th>Preço (R$)</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each cardapio}}
+      <tr>
+        <td>{{this.produto}}</td>
+        <td>{{this.tipo}}</td>
+        <td>{{this.preco}}</td>
+        
+        <td>
+          <a href="/cardapio/editar/{{this.id}}">Editar</a> |
+          <a href="/cardapio/excluir/{{this.id}}">Excluir</a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+
+<h4><a href="/cardapio/formAdd">Adicionar novo produto</a></h4>

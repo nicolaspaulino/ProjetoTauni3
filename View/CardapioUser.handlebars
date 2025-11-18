@@ -1,0 +1,45 @@
+<h1>Cardápio</h1>
+
+{{#if cardapio}}
+<form action="/cardapio/pedido" method="POST">
+
+    <table style="border: 4px dotted rgba(0, 0, 0, 0.918); border-collapse: collapse;">
+        <thead>
+            <tr>
+                <th>Tipo</th>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th>Quantidade</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each cardapio}}
+            <tr>
+                <td>{{tipo}}</td>
+                <td>{{produto}}</td>
+                <td>R$: {{preco}}</td>
+                <td>
+                    <input 
+                        type="number" 
+                        name="itens[{{@index}}][quantidade]" 
+                        min="0" 
+                        value="0"
+                        style="width: 60px; text-align: center;"
+                    >
+                    <input type="hidden" name="itens[{{@index}}][produto]" value="{{produto}}">
+                    <input type="hidden" name="itens[{{@index}}][preco]" value="{{preco}}">
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    <div style="margin-top: 15px;">
+        <button type="submit" style="padding: 8px 16px; font-weight: bold; cursor: pointer;">
+            Enviar Pedido
+        </button>
+    </div>
+</form>
+{{else}}
+    <p>Nenhum produto cadastrado!</p>
+{{/if}}
