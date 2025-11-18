@@ -1,7 +1,8 @@
-Projeto Restaurante2.0
+Projeto Restaurante3.0
 
 - Nicolas Paulino de Souza  
 - Tauany Leobeski Lopes
 
-mudar a senha do db.js.
+Instalar a extensão sqlite escreverno temrinal  node app.js
+
 # ProjetoTauni3
